@@ -16,13 +16,6 @@ type UserType={
   }
 }
 export default function Home() {
-//   const{data}=props
-//   if(!data) return <Loader/>
-// console.log(data)
-// const{intros,contact,about,experience}=data
-
-// console.log("intros", intros)
-// console.log("about", about)
 
   const apiLink=`https://confused-hare-robe.cyclic.app/api/portfolio/get-portfolio-data`
   const fetcher = async(url:string)=> await axios.get(url).then((res)=>res.data)
@@ -49,14 +42,3 @@ export default function Home() {
     </>
   )
 }
-
-
-// export async function getServerSideProps(){
-//   const apiLink=`https://confused-hare-robe.cyclic.app/api/portfolio/get-portfolio-data`;
-//   const {data}=await axios.get(apiLink)  
-//   return{
-//       props:{
-//           data
-//       }
-//   }
-// }
