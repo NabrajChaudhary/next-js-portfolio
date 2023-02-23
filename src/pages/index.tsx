@@ -4,6 +4,7 @@ import Loader from '@/components/Loader'
 import About from '@/features/About'
 import Experience from '@/features/Experience'
 import Intro from '@/features/Intro'
+import Projects from '@/features/Projects'
 
 type UserType={
   data:{
@@ -16,22 +17,22 @@ type UserType={
 }
 export default function Home() {
 
-  const apiLink=`https://confused-hare-robe.cyclic.app/api/portfolio/get-portfolio-data`
+  const apiLink= process.env.API_LINK
   const fetcher = async(url:string)=> await axios.get(url).then((res)=>res.data)
   const{data,error}= useSWR(apiLink,fetcher,{refreshInterval:3000})
 
   if(error) return <Loader/>
    if(!data) return <Loader/>
-
+  
+  const{intros,contact,about,experience,projects}=data
   console.log("data",data)
-  const{intros,contact,about,experience}=data
-  console.log("Intros", intros)
 
   return (
     <>
     <Intro intro={intros}/>
     <About title='About Me' about={about}/>
     <Experience title='Experience' experience={experience} />
+    <Projects title='My Projects' projects={projects}/>
     </>
   )
 }
