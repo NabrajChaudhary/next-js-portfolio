@@ -5,6 +5,7 @@ import About from '@/features/About'
 import Experience from '@/features/Experience'
 import Intro from '@/features/Intro'
 import Projects from '@/features/Projects'
+import ContactForm from '@/features/ContactForm'
 
 type UserType={
   data:{
@@ -33,6 +34,7 @@ export default function Home() {
     <About title='About Me' about={about}/>
     <Experience title='Experience' experience={experience} />
     <Projects title='My Projects' projects={projects}/>
+    <ContactForm/>
     </>
   )
 }

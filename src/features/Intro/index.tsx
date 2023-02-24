@@ -35,7 +35,7 @@ const Intro = (props:IntroType) => {
 />
     </h3>
     <p className="text-white w-2/3">{description}</p>
-    <button className="border-2 border-tertiary text-tertiary px-10 py-3 rounded flex">
+    <button className="border-2 border-tertiary text-tertiary px-10 py-3 rounded flex items-center">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
@@ -49,7 +49,7 @@ const Intro = (props:IntroType) => {
         />
       </svg>
       {"  "}
-      Get CV
+     <span className='text-[20px]'> &nbsp;Get CV</span>
     </button>
   </div>
   )

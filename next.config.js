@@ -2,7 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   env:{
-    API_LINK:process.env.API_LINK
+    API_LINK:process.env.API_LINK,
+    FORM_API:process.env.FORM_API
   },
   images: {
     remotePatterns: [
