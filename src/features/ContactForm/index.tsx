@@ -57,7 +57,7 @@ const ContactForm = () => {
     <section>
         <SectionTitle title='Get Nabraj'/>
         <div className="flex py-10  sm:flex-col items-center justify-center">
-        <div className="w-7/12">  
+        <div className="sm:w-full px-2 lg:w-7/12">  
             <form className='w-full' onSubmit={formik.handleSubmit}>
                 <div className="flex sm:flex-col flex-row gap-4">
                 <Input 
