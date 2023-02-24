@@ -40,7 +40,6 @@ const ContactForm = () => {
     }),
     onSubmit: async (values,action)=>{
         // values.preventDefault();
-        action.resetForm();
         try {
           let response = await axios.post(FormApi,values)
           if(response.data.message){
@@ -51,8 +50,7 @@ const ContactForm = () => {
        } catch (error:any) {
           message.error(error.message)
        }
-       console.log("form Submitted", values);
-     
+       action.resetForm();
     }
 })
   return (
@@ -126,7 +124,8 @@ const ContactForm = () => {
                  rows={4}
                  />
 
-                 <button className='px-8 rounded-md py-3 border-2 border-tertiary text-tertiary hover:bg-tertiary hover:text-white' type='submit'>Submit</button>
+                 <button className='px-8 rounded-md py-3 border-2 border-tertiary text-tertiary hover:bg-tertiary hover:text-white' 
+                 type='submit'>Submit</button>
             </form>
           
         </div>

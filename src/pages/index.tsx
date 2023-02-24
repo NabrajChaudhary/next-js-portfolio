@@ -26,7 +26,7 @@ export default function Home() {
    if(!data) return <Loader/>
   
   const{intros,contact,about,experience,projects}=data
-  console.log("data",data)
+  // console.log("data",data)
 
   return (
     <>
