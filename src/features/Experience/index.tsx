@@ -14,6 +14,7 @@ type ExpProps = {
 
 const Experience = (props: ExpProps) => {
     const{title,experience}=props
+    console.log("experience",experience);
      const [selectedItemIndex, setSelectedItemIndex] = useState<number>(0);
 
   return (
@@ -49,9 +50,7 @@ const Experience = (props: ExpProps) => {
             {experience[selectedItemIndex].company}
           </h1>
           <p className="text-white">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi
-            cupiditate at totam error dolor vero accusamus consequuntur,
-            voluptates laboriosam architecto.
+           {experience[selectedItemIndex].description}
           </p>
         </div>
       </div>

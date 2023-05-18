@@ -27,14 +27,13 @@ const ContactForm = () => {
         email:Yup.string()
         .email("Please provide valid email address")
         .required("Email is required"),
-        mobile:Yup.string()
+        mobile:Yup.number()
         .min(10, "Phone Number must be in 10 Number")
-        .max(10, "Phone Number must be in 10 Number")
         .required("Phone Number is required"),
         subject:Yup.string()
         .required("Subject is required"),
         message:Yup.string()
-        .required("Name is required")
+        .required("Message is required")
         
 
     }),
