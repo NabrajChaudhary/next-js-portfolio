@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST={"..\\features\\About\\index.tsx -> @lottiefiles/lottie-player":{id:886,files:["static/chunks/2981f0c3.2a19507c7b1615d2.js"]}};
