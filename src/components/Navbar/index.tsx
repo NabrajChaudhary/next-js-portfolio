@@ -2,7 +2,7 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <header className=' bg-primary fixed w-full px-40 sm:px-5'>
+    <header className=' bg-primary fixed w-full px-40 sm:px-5  z-20'>
     <div className="p-5 bg-primary flex justify-between ">
     <h1 className="text-secondary sm:text-3xl lg:text-5xl font-handwriting font-semibold">Nabraj Chaudhary</h1>
 
