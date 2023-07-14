@@ -6,7 +6,7 @@ export function middleware(request:any){
 
     try {
         const url = request.nextUrl.clone();
-        const urlPath = url.pathname.split('/').filter((x) => x !== '')
+        const urlPath = url.pathname.split('/').filter((x:any) => x !== '')
        if(['/', '/admin', '/test'].includes(url.pathname)){
         return response.next()
        }
